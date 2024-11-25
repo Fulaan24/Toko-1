@@ -1,0 +1,122 @@
+/* Your existing imports and base styles */
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for mobile first approach */
+nav {
+    display: flex;
+    min-height: 10vh;
+    max-height: 10vh;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-family: 'questrial';
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.logo span {
+    color: rgb(223, 161, 46);
+}
+
+.isi ul {
+    display: flex;
+    list-style: none;
+    gap: clamp(0.5rem, 2vw, 1rem);
+    font-family: 'poppins';
+    flex-wrap: wrap;
+}
+
+.isi a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.isi a:hover {
+    border-bottom: 2px red solid;
+    transition: 0.3s ease-in-out;
+}
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#text {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #df9f2e;
+    font-weight: 500;
+}
+
+.cursor {
+    width: 3px;
+    height: clamp(25px, 5vw, 50px);
+    background-color: black;
+    margin-left: 5px;
+    animation: blink 0.6s infinite;
+}
+
+/* Media Queries */
+/* Tablet (768px and up) */
+@media screen and (min-width: 768px) {
+    nav {
+        justify-content: space-around;
+        padding: 0 40px;
+    }
+
+    .isi ul {
+        gap: 1.5rem;
+    }
+}
+
+/* Laptop (1024px and up) */
+@media screen and (min-width: 1024px) {
+    nav {
+        padding: 0 60px;
+    }
+}
+
+/* Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+    nav {
+        padding: 0 80px;
+    }
+
+    .isi ul {
+        gap: 2rem;
+    }
+}
+
+/* 4K and TV screens (2560px and up) */
+@media screen and (min-width: 2560px) {
+    nav {
+        padding: 0 120px;
+        min-height: 12vh;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .isi a {
+        font-size: 1.3rem;
+    }
+
+    #text {
+        font-size: 4rem;
+    }
+}

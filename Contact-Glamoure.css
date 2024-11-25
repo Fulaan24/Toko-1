@@ -1,0 +1,125 @@
+.halaman-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+}
+
+.contact-utama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    padding: 20px;
+}
+
+.map {
+    aspect-ratio: 1/1;
+    width: 450px;
+    height: 450px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.isi-contact {
+    height: 450px;
+    width: 450px;
+    border: 1px black solid;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+.ketikan {
+    gap: 0.3rem;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.kirim {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-kirim {
+    width: 19rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+}
+
+.contact-kirim:hover {
+    background-color: #000000;
+    color: #f5f5f5;
+    transition: 0.3s ease-in-out;
+}
+
+input {
+    border-radius: 2px;
+    margin: 0.1rem;
+    width: 19rem;
+    height: 2.5rem;
+    border: 1px solid black;
+}
+
+input::placeholder {
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+
+.kirim button{
+    background-color: #f5f5f5;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 19rem;
+    height: 2.5rem;
+}
+
+.kirim button:hover {
+    background-color: #000000;
+    color: #f5f5f5;
+    transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .contact-utama {
+        flex-direction: column;
+    }
+
+    .map, .isi-contact {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .map, .isi-contact {
+        width: 300px;
+        height: 300px;
+    }
+
+    input, .contact-kirim {
+        width: 15rem;
+    }
+}
+
